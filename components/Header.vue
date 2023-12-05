@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const dropdown = ref<boolean>(false)
 const NAV_MENU = [
   {
     name: 'Project',
@@ -13,20 +14,78 @@ const NAV_MENU = [
     to: '/contact-us',
   },
 ]
+const closeDropdown = () => {
+  setTimeout(() => {
+    dropdown.value = false
+  }, 100)
+}
 </script>
 
 <template>
-  <header class="flex items-center justify-between bg-primary">
+  <header class="flex items-center justify-between bg-primary py-2">
     <NuxtLink to="/">
-      <img src="/img/logo.jpg" alt="logo" />
+      <img src="/img/logo-white.png" alt="logo" class="w-52" />
     </NuxtLink>
 
     <nav>
-      <ul class="fp flex gap-2 px-4 text-white">
-        <li v-for="(nav, idx) in NAV_MENU" :key="idx">
-          <NuxtLink :to="nav.to">{{ nav.name }}</NuxtLink>
-        </li>
-      </ul>
+      <div class="hidden md:block">
+        <ul class="fp flex h-14 gap-4 px-4 text-white">
+          <li v-for="(nav, idx) in NAV_MENU" :key="idx" class="flex items-end">
+            <NuxtLink
+              :to="nav.to"
+              class="group flex h-8 flex-col justify-between font-semibold uppercase tracking-wider"
+            >
+              <span
+                class="px-4 duration-300 ease-in-out group-hover:tracking-widest"
+              >
+                {{ nav.name }}
+              </span>
+              <div
+                class="h-1 w-0 bg-white duration-300 ease-in-out group-hover:w-full"
+              />
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="relative inline-block md:hidden"
+        @focusout="closeDropdown()"
+        @click="dropdown = !dropdown"
+      >
+        <button :tabindex="1" role="button" class="mr-6 list-none">
+          <span class="i-mdi-menu text-4xl text-white"></span>
+        </button>
+        <ul
+          :tabindex="1"
+          class="fixed right-0 z-10 mt-5 whitespace-nowrap bg-white p-2 px-4 shadow duration-700 ease-in-out"
+          :class="
+            dropdown
+              ? 'visible h-full w-full opacity-100'
+              : 'invisible h-0 w-0 opacity-0'
+          "
+        >
+          <li
+            v-for="(nav, idx) in NAV_MENU"
+            :key="idx"
+            class="fp w-full py-1 pr-4 text-lg font-medium uppercase text-darkPrimary"
+          >
+            <NuxtLink
+              :to="nav.to"
+              class="group relative flex w-full items-center duration-300 ease-in-out"
+            >
+              <span
+                class="px-4 duration-300 ease-in-out group-hover:tracking-widest"
+              >
+                {{ nav.name }}
+              </span>
+              <div
+                class="h-0.5 w-0 bg-primary opacity-70 duration-300 ease-in-out group-hover:w-full"
+              />
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 </template>
