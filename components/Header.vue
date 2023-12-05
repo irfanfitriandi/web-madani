@@ -1,5 +1,11 @@
 <script setup lang="ts">
+defineProps<{
+  y: string
+}>()
+
+defineEmits(['update:y'])
 const dropdown = ref<boolean>(false)
+
 const NAV_MENU = [
   {
     name: 'Project',
@@ -14,6 +20,7 @@ const NAV_MENU = [
     to: '/contact-us',
   },
 ]
+
 const closeDropdown = () => {
   setTimeout(() => {
     dropdown.value = false
@@ -22,7 +29,10 @@ const closeDropdown = () => {
 </script>
 
 <template>
-  <header class="flex items-center justify-between bg-primary py-2">
+  <header
+    class="sticky top-0 z-10 flex items-center justify-between bg-primary transition-all duration-300"
+    :class="Number(y) > 50 ? 'h-20' : 'h-24'"
+  >
     <NuxtLink to="/">
       <img src="/img/logo-white.png" alt="logo" class="w-52" />
     </NuxtLink>
@@ -58,7 +68,7 @@ const closeDropdown = () => {
         </button>
         <ul
           :tabindex="1"
-          class="fixed right-0 z-10 mt-5 whitespace-nowrap bg-white p-2 px-4 shadow duration-700 ease-in-out"
+          class="fixed right-0 z-10 mt-7 whitespace-nowrap bg-white p-2 px-4 shadow duration-700 ease-in-out"
           :class="
             dropdown
               ? 'visible h-full w-full opacity-100'

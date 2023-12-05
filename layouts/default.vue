@@ -1,22 +1,20 @@
 <script setup lang="ts">
-// const route = useRoute()
-// const router = useRouter()
-// console.log(route)
-// console.log(router)
-// useSeoMeta({
-//   title: 'Madani Property Lampung',
-//   ogTitle: 'Madani Property Lampung',
-//   keywords: 'madani',
-//   description:
-//     'Hunian Fungsional Pertama di Lampung dengan konsep lalala, ... , Open Space, Rumah Tumbuh dan Prinsip Islami. Lokasi strategis di lalala dekat dengan lalala',
-//   ogDescription:
-//     'Hunian Fungsional Pertama di Lampung dengan konsep lalala, ... , Open Space, Rumah Tumbuh dan Prinsip Islami. Lokasi strategis di lalala dekat dengan lalala',
-//   ogImage: '/img/logo.jpg',
-//   twitterCard: 'summary_large_image',
-// })
+const el = ref<HTMLElement | null>(null)
+const { y } = useScroll(el)
+
+const Y = computed({
+  get() {
+    return y.value.toFixed(1)
+  },
+  set(val) {
+    y.value = Number.parseFloat(val)
+  },
+})
 </script>
 
 <template>
-  <Header />
-  <slot />
+  <div ref="el" class="h-screen overflow-scroll">
+    <Header :y="Y" />
+    <slot />
+  </div>
 </template>

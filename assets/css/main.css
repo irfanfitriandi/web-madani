@@ -5,13 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   background-color: #f6f6f6;
   color: #1a1a1a;
-  width: 100vw;
-  min-height: 100vh;
 
   font-family: 'SF Compact Display', sans-serif;
 
@@ -23,6 +26,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
 }
 
 .fp {
