@@ -13,8 +13,10 @@ const Y = computed({
 </script>
 
 <template>
-  <div ref="el" class="h-screen overflow-scroll scroll-smooth">
+  <div ref="el" class="h-screen overflow-y-scroll scroll-smooth">
     <Header :y="Y" />
     <slot />
+
+    <Footer />
   </div>
 </template>

@@ -8,7 +8,7 @@
         url('/img/hero2.jpg');
       background-repeat: repeat;
     "
-    class="relative flex h-[80vh] justify-end bg-[length:200%] bg-center md:h-[90vh] md:bg-[length:100%]"
+    class="relative flex h-[80vh] justify-end bg-[length:200%] bg-center md:h-[90vh] md:bg-[length:90%]"
   >
     <div
       class="w-fit pr-4 pt-10 text-end text-2xl font-light text-darkPrimary md:pr-14 md:pt-24 md:text-5xl"
