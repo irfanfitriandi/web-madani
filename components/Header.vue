@@ -8,16 +8,16 @@ const dropdown = ref<boolean>(false)
 
 const NAV_MENU = [
   {
-    name: 'Project',
+    name: 'Proyek',
     to: '/project',
   },
   {
-    name: 'About Us',
-    to: '/about-us',
+    name: 'Tentang Kami',
+    to: '/about',
   },
   {
-    name: 'Contact Us',
-    to: '/contact-us',
+    name: 'Kontak',
+    to: '/contact',
   },
 ]
 
@@ -30,11 +30,16 @@ const closeDropdown = () => {
 
 <template>
   <header
-    class="sticky top-0 z-10 flex items-center justify-between bg-primary transition-all duration-300"
+    class="sticky top-0 z-10 flex items-center justify-between bg-gradient-to-b from-lightPrimary to-primary transition-all duration-300"
     :class="Number(y) > 50 ? 'h-20' : 'h-24'"
   >
     <NuxtLink to="/">
-      <img src="/img/logo-white.png" alt="logo" class="w-52" />
+      <img
+        src="/img/logo-white.png"
+        alt="logo"
+        class="transition-all duration-300"
+        :class="Number(y) > 50 ? 'w-44' : 'w-52'"
+      />
     </NuxtLink>
 
     <nav>

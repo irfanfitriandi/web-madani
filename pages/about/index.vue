@@ -1,5 +1,4 @@
 <script setup>
-console.log('about')
 useSeoMeta({
   title: 'Madani Property Lampung - About Us',
   ogTitle: 'Madani Property Lampung - About Us',

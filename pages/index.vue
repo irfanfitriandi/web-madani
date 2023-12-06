@@ -8,6 +8,7 @@ useSeoMeta({
 <template>
   <div>
     <SectionHero />
-    <div class="h-screen">halo</div>
+    <SectionAbout />
+    <SectionFormGuest />
   </div>
 </template>
