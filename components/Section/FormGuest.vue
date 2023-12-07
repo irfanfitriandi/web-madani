@@ -1,7 +1,12 @@
 <script setup lang="ts">
-const submitBrosur = async () => {
-  const formEle = document.querySelector('form')
-  const formData = new FormData(formEle!)
+const loading = ref(false)
+
+const submitBrosur = () => {
+  loading.value = true
+
+  const formEle = document.getElementById('form') as HTMLFormElement
+  const formData = new FormData(formEle)
+
   fetch(
     'https://script.google.com/macros/s/AKfycbxc2u4DhqeUYbD2kIppwF54nYpauhQ8jqpuk7hFq3cjnTTEcKjPCTZ7GtPJYcDivyBL/exec',
     {
@@ -11,11 +16,12 @@ const submitBrosur = async () => {
   )
     .then((res) => console.log(res))
     .catch((err) => console.log(err))
-    .finally(() =>
+    .finally(() => {
       window.open(
         'https://drive.google.com/file/d/1U1jrfWmBsqBLAVVI0HHJKs5kUQi5qL-g/view?usp=sharing',
-      ),
-    )
+      )
+      loading.value = false
+    })
 }
 </script>
 
@@ -40,7 +46,7 @@ const submitBrosur = async () => {
     </div>
 
     <div
-      class="flex w-full flex-col overflow-clip rounded-2xl border-2 border-primary/60 md:h-1/2 md:flex-row"
+      class="z-10 flex w-full flex-col overflow-clip rounded-2xl border-2 border-primary/60 md:h-1/2 md:flex-row"
     >
       <iframe
         title="map villa madani"
@@ -53,14 +59,18 @@ const submitBrosur = async () => {
       <div
         class="space-y-6 border-t-2 border-primary/60 bg-white p-4 md:w-1/2 md:border-l-2 md:border-t-0 md:px-10 md:py-8"
       >
-        <h6
+        <span
           class="text-center font-medium tracking-wide text-primary/90 md:text-start"
         >
           Silahkan Isi Formulir
-        </h6>
-        <form @submit.prevent="submitBrosur()" class="form flex flex-col gap-3">
+        </span>
+        <form
+          id="form"
+          @submit.prevent="submitBrosur()"
+          class="form flex flex-col gap-3"
+        >
           <div class="flex w-full flex-col gap-2 md:flex-row md:items-center">
-            <label for="" class="leading-1 w-1/3 whitespace-nowrap text-sm"
+            <label for="Name" class="leading-1 w-1/3 whitespace-nowrap text-sm"
               >Nama</label
             >
             <input
@@ -71,7 +81,7 @@ const submitBrosur = async () => {
             />
           </div>
           <div class="flex w-full flex-col gap-2 md:flex-row md:items-center">
-            <label for="" class="leading-1 w-1/3 whitespace-nowrap text-sm"
+            <label for="Email" class="leading-1 w-1/3 whitespace-nowrap text-sm"
               >Email</label
             >
             <input
@@ -82,7 +92,7 @@ const submitBrosur = async () => {
             />
           </div>
           <div class="flex w-full flex-col gap-2 md:flex-row md:items-center">
-            <label for="" class="leading-1 w-1/3 whitespace-nowrap text-sm"
+            <label for="Phone" class="leading-1 w-1/3 whitespace-nowrap text-sm"
               >Nomor Hp/Whatsapp</label
             >
             <input
@@ -93,7 +103,9 @@ const submitBrosur = async () => {
             />
           </div>
           <div class="flex w-full flex-col gap-2 md:flex-row md:items-center">
-            <label for="" class="leading-1 w-1/3 whitespace-nowrap text-sm"
+            <label
+              for="Domicile"
+              class="leading-1 w-1/3 whitespace-nowrap text-sm"
               >Asal Kota/Domisili</label
             >
             <input
@@ -107,9 +119,11 @@ const submitBrosur = async () => {
           <div class="flex w-full justify-end">
             <button
               type="submit"
-              class="fp z-10 mt-4 w-full transform-gpu rounded-2xl bg-gradient-to-b from-lightPrimary to-primary px-5 py-2 text-xs font-medium uppercase tracking-wide text-white active:scale-105 md:w-1/2"
+              class="fp mt-4 w-full transform-gpu rounded-2xl bg-gradient-to-b from-lightPrimary to-primary px-5 py-2 text-xs font-medium uppercase leading-none tracking-wide text-white active:scale-105 md:w-1/2"
             >
-              Lihat
+              <div :class="loading ? 'animate-pulse font-extrabold' : ''">
+                {{ loading ? 'o o o' : 'Lihat' }}
+              </div>
             </button>
           </div>
         </form>

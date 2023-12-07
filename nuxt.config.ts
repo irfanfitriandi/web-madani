@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'id',
+      },
       title: 'Madani Property Lampung',
       meta: [
         { charset: 'utf-8' },

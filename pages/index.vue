@@ -16,6 +16,7 @@ useSeoMeta({
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
         class="h-[50vh] w-full rounded-2xl"
+        loading="lazy"
       ></iframe>
     </div>
     <SectionFormGuest />

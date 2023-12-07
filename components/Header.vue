@@ -30,7 +30,7 @@ const closeDropdown = () => {
 
 <template>
   <header
-    class="sticky top-0 z-10 flex items-center justify-between bg-gradient-to-b from-lightPrimary to-primary transition-all duration-300"
+    class="sticky top-0 z-50 flex items-center justify-between bg-gradient-to-b from-lightPrimary to-primary transition-all duration-300"
     :class="Number(y) > 50 ? 'h-20' : 'h-24'"
   >
     <NuxtLink to="/">
@@ -68,17 +68,16 @@ const closeDropdown = () => {
         @focusout="closeDropdown()"
         @click="dropdown = !dropdown"
       >
-        <button :tabindex="1" role="button" class="mr-6 list-none">
+        <button name="menu" role="button" class="mr-6 list-none">
           <span class="i-mdi-menu text-4xl text-white"></span>
         </button>
         <ul
-          :tabindex="1"
-          class="fixed right-0 z-10 mt-7 whitespace-nowrap bg-white p-2 px-4 shadow duration-700 ease-in-out"
-          :class="
+          class="fixed right-0 z-10 whitespace-nowrap bg-white p-2 px-4 shadow duration-700 ease-in-out"
+          :class="`${
             dropdown
               ? 'visible h-full w-full opacity-100'
               : 'invisible h-0 w-0 opacity-0'
-          "
+          } ${Number(y) > 50 ? 'mt-4' : 'mt-7'}`"
         >
           <li
             v-for="(nav, idx) in NAV_MENU"
