@@ -87,4 +87,5 @@ export default defineNuxtConfig({
     },
   },
   modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
+  plugins: [{ src: '@/plugins/aos', ssr: false, mode: 'client' }],
 })

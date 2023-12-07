@@ -3,11 +3,15 @@ useSeoMeta({
   title: 'Madani Property Lampung',
   ogTitle: 'Madani Property Lampung',
 })
+const loading = ref(true)
+onMounted(() => {
+  loading.value = false
+})
 </script>
 
 <template>
   <div>
-    <SectionHero />
+    <SectionHero v-bind:loading="loading" />
     <SectionAbout />
     <div class="mt-14 flex justify-center px-6">
       <iframe

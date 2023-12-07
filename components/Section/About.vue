@@ -13,7 +13,13 @@
     "
     class="relative flex h-screen flex-col items-center px-4 py-10 md:py-14"
   >
-    <img src="/img/logo.png" alt="logo" class="w-60 md:w-96" />
+    <div
+      data-aos="fade-up"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="1000"
+    >
+      <img src="/img/logo.png" alt="logo" class="w-60 md:w-96" />
+    </div>
     <div class="absolute -bottom-10 h-24 w-full bg-white blur-xl"></div>
   </section>
 </template>

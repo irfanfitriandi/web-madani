@@ -1,20 +1,16 @@
 <script setup lang="ts">
-const el = ref<HTMLElement | null>(null)
-const { y } = useScroll(el)
+const scrollY = ref(0)
 
-const Y = computed({
-  get() {
-    return y.value.toFixed(1)
-  },
-  set(val) {
-    y.value = Number.parseFloat(val)
-  },
-})
+if (typeof window !== 'undefined') {
+  window.addEventListener('scroll', function () {
+    scrollY.value = this.scrollY
+  })
+}
 </script>
 
 <template>
-  <div ref="el" class="h-screen overflow-y-scroll scroll-smooth">
-    <Header :y="Y" />
+  <div>
+    <Header :y="scrollY" />
     <slot />
 
     <Footer />

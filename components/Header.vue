@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  y: string
+  y: number
 }>()
 
 defineEmits(['update:y'])
@@ -31,14 +31,14 @@ const closeDropdown = () => {
 <template>
   <header
     class="sticky top-0 z-50 flex items-center justify-between bg-gradient-to-b from-lightPrimary to-primary transition-all duration-300"
-    :class="Number(y) > 50 ? 'h-20' : 'h-24'"
+    :class="y > 50 ? 'h-20' : 'h-24'"
   >
     <NuxtLink to="/">
       <img
         src="/img/logo-white.png"
         alt="logo"
         class="transition-all duration-300"
-        :class="Number(y) > 50 ? 'w-44' : 'w-52'"
+        :class="y > 50 ? 'w-44' : 'w-52'"
       />
     </NuxtLink>
 
@@ -77,7 +77,7 @@ const closeDropdown = () => {
             dropdown
               ? 'visible h-full w-full opacity-100'
               : 'invisible h-0 w-0 opacity-0'
-          } ${Number(y) > 50 ? 'mt-4' : 'mt-7'}`"
+          } ${y > 50 ? 'mt-4' : 'mt-7'}`"
         >
           <li
             v-for="(nav, idx) in NAV_MENU"
