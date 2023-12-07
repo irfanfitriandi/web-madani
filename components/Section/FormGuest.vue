@@ -1,4 +1,9 @@
 <script setup lang="ts">
+// const { GoogleSpreadsheet } = require('google-spreadsheet')
+
+// import { GoogleSpreadsheet } from 'google-spreadsheet'
+import key from '@/constants/key.json'
+
 const form = reactive({
   name: '',
   email: '',
@@ -6,8 +11,34 @@ const form = reactive({
   domicile: '',
 })
 
-const submitBrosur = () => {
-  alert('tolol')
+// const jwt = new JWT({
+//   email: key.client_email,
+//   key: key.private_key,
+//   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+// })
+
+const submitBrosur = async (form: any) => {
+  // const doc = new GoogleSpreadsheet(
+  //   '1JNYnZ7GKLz8tklzYyJn6oL47WLwpYK_Ll1zf0qoN7VQ',
+  // )
+  // await doc.useServiceAccountAuth(key)
+  // await doc.loadInfo()
+  // const sheet = doc.sheetsByIndex[0]
+  // await sheet.addRow(form)
+  fetch(
+    'https://script.google.com/macros/s/AKfycbxNRjtfz-26nKb5MUXjZdDVXLD6Wg654V4RHHYECOgzov25jxpQP6Yl17HxkuukpaS0/exec',
+    {
+      method: 'POST',
+      body: form,
+    },
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 }
 </script>
 
@@ -43,16 +74,18 @@ const submitBrosur = () => {
       ></iframe>
 
       <div
-        class="space-y-6 border-t-2 border-primary/60 bg-white p-4 md:w-1/2 md:border-l-2 md:border-t-0"
+        class="space-y-6 border-t-2 border-primary/60 bg-white p-4 md:w-1/2 md:border-l-2 md:border-t-0 md:px-10 md:py-8"
       >
         <h6
           class="text-center font-medium tracking-wide text-primary/90 md:text-start"
         >
           Silahkan Isi Formulir
         </h6>
-        <form @submit.prevent="submitBrosur()" class="flex flex-col gap-3">
+        <form @submit.prevent="submitBrosur(form)" class="flex flex-col gap-3">
           <div class="flex w-full flex-col gap-2 md:flex-row md:items-center">
-            <label for="" class="leading-1 w-1/3 text-sm">Nama</label>
+            <label for="" class="leading-1 w-1/3 whitespace-nowrap text-sm"
+              >Nama</label
+            >
             <input
               v-model="form.name"
               type="text"
@@ -61,7 +94,9 @@ const submitBrosur = () => {
             />
           </div>
           <div class="flex w-full flex-col gap-2 md:flex-row md:items-center">
-            <label for="" class="leading-1 w-1/3 text-sm">Email</label>
+            <label for="" class="leading-1 w-1/3 whitespace-nowrap text-sm"
+              >Email</label
+            >
             <input
               v-model="form.email"
               type="email"
@@ -70,7 +105,7 @@ const submitBrosur = () => {
             />
           </div>
           <div class="flex w-full flex-col gap-2 md:flex-row md:items-center">
-            <label for="" class="leading-1 w-1/3 text-sm"
+            <label for="" class="leading-1 w-1/3 whitespace-nowrap text-sm"
               >Nomor Hp/Whatsapp</label
             >
             <input
@@ -81,7 +116,7 @@ const submitBrosur = () => {
             />
           </div>
           <div class="flex w-full flex-col gap-2 md:flex-row md:items-center">
-            <label for="" class="leading-1 w-1/3 text-sm"
+            <label for="" class="leading-1 w-1/3 whitespace-nowrap text-sm"
               >Asal Kota/Domisili</label
             >
             <input
