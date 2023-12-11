@@ -20,6 +20,9 @@ devDependencies:
   '@types/aos':
     specifier: ^3.0.7
     version: 3.0.7
+  '@vueuse/components':
+    specifier: ^10.7.0
+    version: 10.7.0(vue@3.3.9)
   '@vueuse/core':
     specifier: ^10.7.0
     version: 10.7.0(vue@3.3.9)
@@ -2067,6 +2070,17 @@ packages:
 
   /@vue/shared@3.3.9:
     resolution: {integrity: sha512-ZE0VTIR0LmYgeyhurPTpy4KzKsuDyQbMSdM49eKkMnT5X4VfFBLysMzjIZhLEFQYjjOVVfbvUDHckwjDFiO2eA==}
+    dev: true
+
+  /@vueuse/components@10.7.0(vue@3.3.9):
+    resolution: {integrity: sha512-ycyF+fZtipP/8WVWZ5y6Cb9twJ0EeVHIqcqkCcTpmAJdheRjorT8v6cHk3h144HHTMgIfBWC6TaSukDG7QFmsw==}
+    dependencies:
+      '@vueuse/core': 10.7.0(vue@3.3.9)
+      '@vueuse/shared': 10.7.0(vue@3.3.9)
+      vue-demi: 0.14.6(vue@3.3.9)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /@vueuse/core@10.7.0(vue@3.3.9):

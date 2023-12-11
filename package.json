@@ -16,6 +16,7 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@types/aos": "^3.0.7",
+    "@vueuse/components": "^10.7.0",
     "@vueuse/core": "^10.7.0",
     "@vueuse/nuxt": "^10.7.0",
     "aos": "^2.3.4",
