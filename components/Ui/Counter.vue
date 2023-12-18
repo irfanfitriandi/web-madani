@@ -5,6 +5,7 @@ const props = defineProps<{
   value: number
   speed: number // smaller is faster
   reload?: boolean
+  plus?: boolean
 }>()
 
 const displayNumber = ref(0)
@@ -32,6 +33,6 @@ function onElementVisibility(state: boolean) {
 
 <template>
   <div v-element-visibility="onElementVisibility">
-    {{ displayNumber }}
+    {{ displayNumber }}{{ plus ? '+' : '' }}
   </div>
 </template>

@@ -9,11 +9,11 @@ const dropdown = ref<boolean>(false)
 const NAV_MENU = [
   {
     name: 'Proyek',
-    to: '/project',
+    to: '/#project',
   },
   {
     name: 'Tentang Kami',
-    to: '/about',
+    to: '/#about',
   },
   {
     name: 'Kontak',

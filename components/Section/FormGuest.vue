@@ -37,13 +37,13 @@ const submitBrosur = () => {
         url('/img/backdrop.jpg');
       background-repeat: repeat;
     "
-    class="relative flex min-h-screen scroll-mt-24 flex-col items-center gap-6 px-4 py-10 md:space-y-14 md:py-14"
+    class="relative flex min-h-screen scroll-mt-20 flex-col items-center gap-6 px-4 pt-14 md:space-y-14 md:pt-24"
   >
     <div
       class="flex flex-col gap-3"
       data-aos="fade-up"
       data-aos-easing="ease-in-sine"
-      data-aos-duration="600"
+      data-aos-duration="1000"
     >
       <h3 class="fp text-2xl font-medium text-primary md:text-4xl">
         Lihat Brosur
