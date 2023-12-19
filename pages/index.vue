@@ -13,7 +13,7 @@ onMounted(() => {
   <div>
     <SectionHero v-bind:loading="loading" />
     <SectionAbout />
-    <div class="mt-14 flex justify-center px-6">
+    <section class="mt-14 flex justify-center px-6">
       <iframe
         src="https://www.youtube.com/embed/Rahm6EROnco?si=fgXFKmrhvYjDEGp_"
         title="property video"
@@ -22,7 +22,8 @@ onMounted(() => {
         class="h-[50vh] w-full rounded-2xl"
         loading="lazy"
       ></iframe>
-    </div>
+    </section>
+    <SectionProject />
     <SectionFormGuest />
   </div>
 </template>

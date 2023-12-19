@@ -1,16 +1,16 @@
 <script setup lang="ts">
 const ABOUT = [
   {
+    icon: 'i-mdi-map-marker-path',
+    desc: 'Lokasi strategis di perkotaan dengan akses yang mudah.',
+  },
+  {
+    icon: 'i-mdi-home-modern',
+    desc: 'Desain trendy ala Mediterania yang modern',
+  },
+  {
     icon: 'i-mdi-home-assistant',
-    desc: 'Menjadi yang terdepan dalam inovasi baru yang selalu berkembang dan menjadikan hunian rumah yang aman, nyaman, dan asri bagi penghuninya.',
-  },
-  {
-    icon: 'i-mdi-shield-star',
-    desc: 'Mewujudkan konsep perumahan yang berkualitas seiring dengan komitmen kami yang berkembang karena kepercayaan dari Anda',
-  },
-  {
-    icon: 'i-mdi-account-hard-hat',
-    desc: ' Memberi layanan kepada konsumen dari mulai lokasi rumah yang strategis, desain yang inovatif dan kreatif serta konsumen di berikan kemudahan dalam membayar dengan uang muka dan angsuran yang mudah',
+    desc: 'Fasilitas lengkap: masjid, minimarket, sekolah dll.',
   },
 ]
 
@@ -64,14 +64,14 @@ const COUNTER = [
             data-aos-easing="ease-in-sine"
             data-aos-duration="1000"
           >
-            PT. Multi Karya Madani merupakan developer yang berdiri sejak tahun
-            2014 dengan berbagai jenis properti di beberapa lokasi di Lampung.
+            Membangun Mimpi, Menghadirkan Rumah Impian Sejak 2014 di Beragam
+            Lokasi di Lampung.
           </p>
         </div>
 
-        <div class="flex flex-col gap-6 md:gap-10 2xl:flex-row">
+        <div class="flex flex-wrap items-center justify-center gap-6 md:gap-10">
           <div
-            class="w-1/ flex flex-col items-center gap-2"
+            class="flex flex-col items-center gap-2"
             v-for="(p, idx) in ABOUT"
             :key="idx"
           >
