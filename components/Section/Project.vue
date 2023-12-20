@@ -66,6 +66,9 @@ const PROPERTY = [
         class="group relative z-10 block h-[15rem] w-[18rem] overflow-clip rounded-xl shadow-lg shadow-gray-600/30"
         v-for="(prop, idx) in PROPERTY"
         :key="idx"
+        data-aos="fade-in"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="1000"
       >
         <img
           :src="prop.src"

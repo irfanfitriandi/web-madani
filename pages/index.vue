@@ -24,6 +24,7 @@ onMounted(() => {
       ></iframe>
     </section>
     <SectionProject />
+    <SectionBiaya />
     <SectionFormGuest />
   </div>
 </template>

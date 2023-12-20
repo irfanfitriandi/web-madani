@@ -98,7 +98,7 @@ const COUNTER = [
     </div>
 
     <div
-      class="mb-28 mt-14 flex items-start justify-center gap-5 bg-mdnLightGold/10 p-6 md:gap-24"
+      class="mb-28 mt-14 flex items-start justify-center gap-5 bg-mdnLightGold/20 p-6 md:gap-24"
     >
       <div
         class="flex flex-col items-center justify-center gap-2"
