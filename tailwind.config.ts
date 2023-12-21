@@ -11,6 +11,7 @@ export default <Partial<Config>>{
         mdnGold: '#E2A331',
         mdnDarkGold: '#C7822A',
         mdnLightGold: '#FBD75F',
+        mdnLightGold20: '#FEF7DF',
       },
     },
   },
