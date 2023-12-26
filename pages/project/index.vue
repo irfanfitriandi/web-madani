@@ -1,6 +1,4 @@
 <script setup lang="ts">
-console.log('project')
-
 useSeoMeta({
   title: 'Madani Property Lampung - Project Us',
   ogTitle: 'Madani Property Lampung - Project Us',

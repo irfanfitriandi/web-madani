@@ -2,40 +2,46 @@
 const PROPERTY = [
   {
     name: 'madani',
-    path: '/madani',
+    path: '/property/madani',
     src: '/img/cover_madani.jpg',
   },
   {
     name: 'permata',
-    path: '/permata',
+    path: '/property/permata',
     src: '/img/cover_permata.png',
   },
   {
     name: 'zhafira',
-    path: '/zhafira',
+    path: '/property/zhafira',
     src: '/img/cover_zhafira.jpg',
   },
   {
     name: 'damaido',
-    path: '/damaido',
+    path: '/property/damaido',
     src: '/img/cover_damaido.jpg',
   },
   {
     name: 'green residence',
-    path: '/green-res',
+    path: '/property/green-res',
     src: '/img/cover_greenres.jpg',
   },
   {
     name: 'property lainnya',
-    path: '/more',
+    path: '/property/more',
     src: '/img/cover_more.jpg',
   },
 ]
+
+const width = ref()
+
+onMounted(() => {
+  width.value = screen.width
+})
 </script>
 
 <template>
   <section
-    id="project"
+    id="property"
     style="
       background-image: linear-gradient(
           rgb(255, 255, 255),
@@ -69,7 +75,7 @@ const PROPERTY = [
         data-aos="fade-up"
         data-aos-easing="ease-in-out"
         data-aos-duration="1000"
-        :data-aos-delay="`${idx}00`"
+        :data-aos-delay="width > 10 ? `${idx}00` : '0'"
       >
         <img
           :src="prop.src"
