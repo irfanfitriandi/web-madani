@@ -8,6 +8,7 @@ export default <Partial<Config>>{
         primary: '#2C663E',
         darkPrimary: '#0F5924',
         lightPrimary: '#5F9756',
+        lightPrimary20: '#EBFCE8',
         mdnGold: '#E2A331',
         mdnDarkGold: '#C7822A',
         mdnLightGold: '#FBD75F',

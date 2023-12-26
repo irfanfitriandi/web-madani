@@ -98,7 +98,7 @@ const COUNTER = [
     </div>
 
     <div
-      class="mb-28 mt-14 flex items-start justify-center gap-5 bg-mdnLightGold/20 p-6 md:gap-24"
+      class="bg-lightPrimary20 mb-28 mt-14 flex items-start justify-center gap-5 p-6 md:gap-24"
     >
       <div
         class="flex flex-col items-center justify-center gap-2"
@@ -108,11 +108,30 @@ const COUNTER = [
         <UiCounter
           class="fp text-3xl font-medium text-primary md:text-4xl"
           :value="c.count"
-          :speed="100"
+          :speed="1000"
           :plus="c.plus"
+          data-aos="fade-up"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
         />
         <p class="text-center text-xs md:text-sm">{{ c.desc }}</p>
       </div>
+    </div>
+
+    <div
+      class="mt-14 flex justify-center px-6"
+      data-aos="zoom-in"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="1000"
+    >
+      <iframe
+        src="https://www.youtube.com/embed/Rahm6EROnco?si=fgXFKmrhvYjDEGp_"
+        title="property video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        class="h-[50vh] w-full rounded-2xl"
+        loading="lazy"
+      ></iframe>
     </div>
   </section>
 </template>

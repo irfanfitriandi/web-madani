@@ -8,7 +8,7 @@ const dropdown = ref<boolean>(false)
 
 const NAV_MENU = [
   {
-    name: 'Proyek',
+    name: 'Produk',
     to: '/#project',
   },
   {

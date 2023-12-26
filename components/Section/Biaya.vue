@@ -30,17 +30,16 @@ const BIAYA = [
 <template>
   <section
     id="biaya"
-    class="relative mt-14 flex h-auto flex-col overflow-x-clip bg-mdnLightGold20 px-4 md:mt-24"
+    class="bg-lightPrimary20 relative mt-14 flex h-auto flex-col overflow-x-clip px-4 md:mt-24"
   >
     <div class="z-10">
       <div
-        data-aos="fade-up"
+        data-aos="fade-right"
         data-aos-easing="ease-in-sine"
         data-aos-duration="1000"
       >
-        <p class="text-xl text-darkPrimary md:text-2xl">
-          Beli Rumah di <br />
-          <b>Madani Property</b> <br />
+        <p class="text-xl text-darkPrimary md:text-3xl">
+          Beli Rumah di <b>Madani Property</b> <br />
           Sudah <b>Bebas Biaya</b>
         </p>
       </div>
@@ -48,9 +47,10 @@ const BIAYA = [
         <div
           v-for="(b, idx) in BIAYA"
           :key="idx"
-          data-aos="fade-in"
+          data-aos="fade-up"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
+          :data-aos-delay="`${idx}00`"
         >
           <div
             class="relative h-36 w-36 -skew-x-12 overflow-clip border-2 border-lightPrimary/90 bg-gradient-to-b from-lightPrimary to-primary md:h-52 md:w-52"
@@ -58,10 +58,10 @@ const BIAYA = [
             <img
               :src="b.src"
               :alt="b.name"
-              class="absolute -left-6 -top-9 w-[190px] max-w-fit skew-x-12 object-cover opacity-80 md:w-[255px]"
+              class="absolute -left-6 -top-9 w-[190px] max-w-fit skew-x-12 object-cover md:w-[255px]"
             />
           </div>
-          <p class="mt-1 text-lg font-light text-primary italic font-sans">
+          <p class="mt-1 font-sans text-lg font-light italic text-primary">
             {{ b.name }}
           </p>
         </div>
@@ -69,10 +69,10 @@ const BIAYA = [
     </div>
 
     <div
-      class="absolute -left-6 -top-10 h-24 w-[150vh] bg-mdnLightGold20 blur-xl"
+      class="bg-lightPrimary20 absolute -left-6 -top-10 h-24 w-[150vh] blur-xl"
     ></div>
     <div
-      class="absolute -bottom-8 -left-6 z-[2] h-24 w-[150vh] bg-mdnLightGold20 blur-xl"
+      class="bg-lightPrimary20 absolute -bottom-8 -left-6 z-[2] h-24 w-[150vh] blur-xl"
     ></div>
   </section>
 </template>

@@ -6,16 +6,19 @@ defineProps<{
 
 <template>
   <section
-    style="
-      background-image: linear-gradient(
-          rgba(255, 255, 255, 0.33),
-          rgba(0, 0, 0, 0.3)
-        ),
-        url('/img/hero2.jpg');
-      background-repeat: repeat;
-    "
-    class="relative flex h-[80vh] justify-end bg-[length:200%] bg-center md:h-[90vh] md:bg-[length:90%]"
+    class="relative flex h-[80vh] justify-end bg-transparent bg-[length:200%] bg-center md:h-[90vh] md:bg-[length:90%]"
   >
+    <div
+      style="
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.33),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url('/img/hero2.jpg');
+        background-repeat: repeat;
+      "
+      class="absolute h-[80vh] w-full bg-[length:200%] bg-center md:h-[90vh] md:bg-[length:90%]"
+    ></div>
     <div
       class="w-fit pr-4 pt-10 text-end text-2xl font-light text-darkPrimary md:pr-14 md:pt-24 md:text-5xl"
       data-aos="fade-left"
