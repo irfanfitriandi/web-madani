@@ -1,71 +1,5 @@
 <script setup lang="ts">
-const DB = [
-  {
-    name: 'madani',
-    display: 'Villa Madani',
-    desc: '',
-    address: '',
-    img: {
-      cover: ['/img/vm/cover_vm.jpg'],
-      spek: ['/img/vm/spek_vm180.jpg'],
-      site: ['/img/nz/siteplan_nz.jpg'],
-      drone: ['/img/nz/siteplan_nz.jpg'],
-      detail: ['/img/nz/detail_nz.jpg'],
-    },
-  },
-  {
-    name: 'permata',
-    display: 'Villa Permata',
-    desc: '',
-    address: '',
-    img: {
-      cover: ['/img/vm/cover_vm.jpg'],
-      spek: ['/img/vm/spek_vm180.jpg'],
-      site: ['/img/nz/siteplan_nz.jpg'],
-      drone: ['/img/nz/siteplan_nz.jpg'],
-      detail: ['/img/nz/detail_nz.jpg'],
-    },
-  },
-  {
-    name: 'zhafira',
-    display: 'New Zhafira',
-    desc: '',
-    address: '',
-    img: {
-      cover: ['/img/vm/cover_vm.jpg'],
-      spek: ['/img/vm/spek_vm180.jpg'],
-      site: ['/img/nz/siteplan_nz.jpg'],
-      drone: ['/img/nz/siteplan_nz.jpg'],
-      detail: ['/img/nz/detail_nz.jpg'],
-    },
-  },
-  {
-    name: 'damaido',
-    display: 'Damaido',
-    desc: '',
-    address: '',
-    img: {
-      cover: ['/img/vm/cover_vm.jpg'],
-      spek: ['/img/vm/spek_vm180.jpg'],
-      site: ['/img/nz/siteplan_nz.jpg'],
-      drone: ['/img/nz/siteplan_nz.jpg'],
-      detail: ['/img/nz/detail_nz.jpg'],
-    },
-  },
-  {
-    name: 'green-res',
-    display: 'Green Residence',
-    desc: '',
-    address: '',
-    img: {
-      cover: ['/img/vm/cover_vm.jpg'],
-      spek: ['/img/vm/spek_vm180.jpg'],
-      site: ['/img/nz/siteplan_nz.jpg'],
-      drone: ['/img/nz/siteplan_nz.jpg'],
-      detail: ['/img/nz/detail_nz.jpg'],
-    },
-  },
-]
+import { DB } from './constants'
 
 const data = ref({
   name: '',
@@ -76,20 +10,30 @@ const data = ref({
     cover: [''],
     spek: [''],
     site: [''],
-    drone: [''],
     detail: [''],
+    denah: [''],
   },
+  maps: '',
 })
 
 onMounted(() => {
   const route = useRoute()
   data.value = DB.filter((d) => d.name === route.params.property)[0]
-  console.log(data.value.img.cover[0])
 })
 </script>
 
 <template>
-  <section class="relative flex flex-col items-center justify-center">
+  <section
+    style="
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.8)
+        ),
+        url('/img/backdrop.jpg');
+      background-repeat: repeat;
+    "
+    class="relative flex flex-col items-center justify-center"
+  >
     <div class="h-42 relative w-full overflow-clip md:h-52">
       <div
         style="
@@ -118,17 +62,42 @@ onMounted(() => {
     </div>
 
     <div
-      class="mt-4 flex flex-col gap-1 md:mt-6"
-      data-aos="fade-up"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="1000"
+      class="flex max-w-[600px] flex-col items-center justify-center gap-4 p-5"
     >
-      <h3 class="fp text-xl font-medium text-primary md:text-2xl">Overview</h3>
-      <div class="mx-auto h-1 w-5/6 bg-mdnLightGold"></div>
+      <div>
+        <TitleProp title="Overview" />
+        <ImgProp :data="data.img.cover" />
+      </div>
+
+      <div>
+        <TitleProp title="Spesifikasi" />
+        <ImgProp :data="data.img.spek" />
+      </div>
+
+      <div>
+        <TitleProp title="Denah" />
+        <ImgProp :data="data.img.denah" />
+      </div>
+
+      <div>
+        <TitleProp title="Detail" />
+        <ImgProp :data="data.img.detail" />
+      </div>
+
+      <div>
+        <TitleProp title="Siteplan" />
+        <ImgProp :data="data.img.site" />
+      </div>
     </div>
 
-    <div>
-      <img :src="data.img.spek[0]" alt="img" class="h-96 w-96 object-cover" />
+    <div class="w-full">
+      <iframe
+        title="map villa madani"
+        :src="data.maps"
+        class="h-[50vh] w-full"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   </section>
 </template>
