@@ -8,7 +8,7 @@ const SOSMED = [
   {
     name: 'Whatsapp',
     icon: 'i-mdi-whatsapp',
-    link: 'https://api.whatsapp.com/send/?phone=628877092525&text&type=phone_number&app_absent=0',
+    link: 'https://api.whatsapp.com/send/?phone=628877092525',
   },
   {
     name: 'Instagram',
