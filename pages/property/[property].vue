@@ -60,7 +60,7 @@ onMounted(() => {
             {{ data.display }}
           </div>
           <div
-            class="absolute -right-1 top-1 -z-10 h-full w-full bg-white opacity-80"
+            class="absolute -right-1 top-1 -z-10 h-full w-full bg-mdnGold opacity-80"
           ></div>
         </div>
       </div>
@@ -69,44 +69,51 @@ onMounted(() => {
     <div
       class="flex max-w-[600px] flex-col items-center justify-center gap-4 p-5"
     >
-      <div>
+      <div v-if="data.img.cover[0].length > 2">
         <TitleProp title="Overview" />
         <ImgProp :data="data.img.cover" />
       </div>
 
-      <div>
+      <div v-if="data.img.spek[0].length > 2">
         <TitleProp title="Spesifikasi" />
         <ImgProp :data="data.img.spek" />
       </div>
 
-      <div>
+      <div v-if="data.img.denah[0].length > 2">
         <TitleProp title="Denah" />
         <ImgProp :data="data.img.denah" />
       </div>
 
-      <div>
+      <div v-if="data.img.detail[0].length > 2">
         <TitleProp title="Detail" />
         <ImgProp :data="data.img.detail" />
       </div>
 
-      <div>
+      <div v-if="data.img.site[0].length > 2">
         <TitleProp title="Siteplan" />
         <ImgProp :data="data.img.site" />
       </div>
     </div>
 
-    <div>
-      <p>
-        Waktunya miliki rumah impian anda! Segera hubungi kami untuk rincian
-        lebih lanjut dan jadwalkan kunjungan langsung tentang tipe rumah ini.
-      </p>
+    <div class="mt-4 px-1">
+      <div class="mb-5">
+        <h3
+          class="fp text-center text-lg font-semibold text-primary md:text-xl"
+        >
+          Waktunya miliki rumah impian anda!
+        </h3>
+        <p class="text-center text-xs md:text-sm">
+          Segera hubungi kami untuk rincian lebih lanjut dan jadwalkan kunjungan
+          langsung tipe rumah ini.
+        </p>
+      </div>
       <a
         :href="`https://api.whatsapp.com/send/?phone=628877092525&text=Hai Angga, saya ingin bertanya mengenai Perumahan ${data.display}`"
         target="_blank"
         class="w-full"
       >
         <button
-          class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-b from-lightPrimary to-primary py-2 text-lg text-white shadow-lightPrimary/50 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+          class="mx-auto flex w-1/2 items-center justify-center gap-2 rounded-full bg-gradient-to-b from-lightPrimary to-primary py-1 text-lg text-white shadow-lightPrimary/50 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
         >
           <span class="i-mdi-whatsapp text-2xl"></span>
           <div>Angga</div>
@@ -114,7 +121,7 @@ onMounted(() => {
       </a>
     </div>
 
-    <div class="w-full">
+    <div class="mt-10 w-full">
       <iframe
         title="map villa madani"
         :src="data.maps"

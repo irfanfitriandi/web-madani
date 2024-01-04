@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div
-    class="mx-auto my-4 flex w-max flex-col items-center gap-1 bg-gradient-to-b from-lightPrimary/90 to-primary/80 p-1 shadow-md shadow-lightPrimary/50 md:my-6"
+    class="mx-auto my-4 flex w-max flex-col items-center gap-1 bg-gradient-to-b from-mdnLightGold to-mdnGold/80 p-1 shadow-md shadow-mdnGold/40 md:my-6"
     data-aos="zoom-in"
     data-aos-easing="ease-in-sine"
     data-aos-duration="1000"

@@ -2,17 +2,17 @@
 const PROPERTY = [
   {
     name: 'madani',
-    path: '/property/madani',
+    path: '/property/villa-madani',
     src: '/img/cover_madani.jpg',
   },
   {
     name: 'permata',
-    path: '/property/permata',
+    path: '/property/villa-permata',
     src: '/img/cover_permata.png',
   },
   {
     name: 'zhafira',
-    path: '/property/zhafira',
+    path: '/property/new-zhafira',
     src: '/img/cover_zhafira.jpg',
   },
   {
@@ -22,12 +22,12 @@ const PROPERTY = [
   },
   {
     name: 'green residence',
-    path: '/property/green-res',
+    path: '/property/green-residence',
     src: '/img/cover_greenres.jpg',
   },
   {
     name: 'property lainnya',
-    path: '/property/more',
+    path: 'https://docs.google.com/presentation/d/1JLibOlL9surbsXgdbZm12XkeahRlY7Mk/edit#slide=id.p1',
     src: '/img/cover_more.jpg',
   },
 ]
