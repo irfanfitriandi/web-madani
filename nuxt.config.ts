@@ -14,7 +14,7 @@ export default defineNuxtConfig({
           hid: 'description',
           name: 'description',
           content:
-            'Hunian Fungsional di Lampung dengan konsep lalala, ... , Open Space, Rumah Tumbuh dan Prinsip Islami. Lokasi strategis di lalala dekat dengan lalala',
+            'Madani Property Lampung menyajikan hunian aman, nyaman, dan asri di Lampung. Kami hadir dengan inovasi konsep perumahan berkualitas, lokasi strategis, desain kreatif, dan kemudahan pembayaran.',
         },
         { name: 'format-detection', content: 'telephone=no' },
         { 'http-equiv': 'cache-control', content: 'no-cache' },
@@ -29,13 +29,13 @@ export default defineNuxtConfig({
           name: 'og:description',
           property: 'og:description',
           content:
-            'Hunian Fungsional di Lampung dengan konsep lalala, ... , Open Space, Rumah Tumbuh dan Prinsip Islami. Lokasi strategis di lalala dekat dengan lalala',
+            'Madani Property Lampung menyajikan hunian aman, nyaman, dan asri di Lampung. Kami hadir dengan inovasi konsep perumahan berkualitas, lokasi strategis, desain kreatif, dan kemudahan pembayaran.',
         },
         {
           hid: 'og:image',
           name: 'og:image',
           property: 'og:image',
-          content: '/img/logo.png',
+          content: '/img/web-img.jpg',
         },
         {
           hid: 'og:image:alt',

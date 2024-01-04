@@ -31,7 +31,11 @@ export const DB = [
       spek: ['/img/vp/spek_vp.jpg'],
       site: ['/img/vp/siteplan_vp.jpg', '/img/vp/drone_vp.jpg'],
       detail: [''],
-      denah: [''],
+      denah: [
+        '/img/vp/denah_vp1.jpg',
+        '/img/vp/denah_vp21.jpg',
+        '/img/vp/denah_vp22.jpg',
+      ],
     },
     maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.1462136813852!2d105.3037129!3d-5.394679700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db59e3515d3b%3A0xff85e940426f5b6!2sVILLA%20MADANI!5e0!3m2!1sen!2sid!4v1703754264608!5m2!1sen!2sid',
   },
@@ -57,7 +61,7 @@ export const DB = [
     img: {
       cover: ['/img/d/cover_d.jpg'],
       spek: ['/img/d/spek_d.jpg'],
-      site: ['/img/d/siteplan_d.jpg'],
+      site: ['/img/d/siteplan_d2.jpg', '/img/d/siteplan_d.jpg'],
       detail: [''],
       denah: ['/img/d/denah_d.jpg'],
     },
@@ -71,7 +75,7 @@ export const DB = [
     img: {
       cover: ['/img/gr/cover_gr.jpg'],
       spek: ['/img/gr/spek_gr.jpg'],
-      site: [''],
+      site: ['/img/gr/siteplan_gr.jpg'],
       detail: [''],
       denah: ['/img/gr/denah_gr.jpg'],
     },
