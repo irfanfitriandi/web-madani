@@ -12,8 +12,16 @@ const NAV_MENU = [
     to: '/#property',
   },
   {
-    name: 'Tentang Kami',
+    name: 'Tentang',
     to: '/#about',
+  },
+  {
+    name: 'Kritik',
+    to: '/#kritik',
+  },
+  {
+    name: 'Agen',
+    to: '/agen',
   },
   {
     name: 'Kontak',

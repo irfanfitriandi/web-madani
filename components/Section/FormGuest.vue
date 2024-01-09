@@ -1,10 +1,11 @@
 <script setup lang="ts">
-const loading = ref(false)
+const loadingGuest = ref(false)
+const loadingKritik = ref(false)
 
 const submitBrosur = () => {
-  loading.value = true
+  loadingGuest.value = true
 
-  const formEle = document.getElementById('form') as HTMLFormElement
+  const formEle = document.getElementById('guest') as HTMLFormElement
   const formData = new FormData(formEle)
 
   fetch(
@@ -20,7 +21,29 @@ const submitBrosur = () => {
       window.open(
         'https://drive.google.com/file/d/1U1jrfWmBsqBLAVVI0HHJKs5kUQi5qL-g/view?usp=sharing',
       )
-      loading.value = false
+      loadingGuest.value = false
+      formEle.reset()
+    })
+}
+
+const submitKritik = () => {
+  loadingKritik.value = true
+
+  const formEle = document.getElementById('kritiksaran') as HTMLFormElement
+  const formData = new FormData(formEle)
+
+  fetch(
+    'https://script.google.com/macros/s/AKfycbzjr2heeqicPzEGg-SFy-SkFGNcEs0rODzYXeueZ9NQrQwTUEneCVp7xuAPGx0XXRqwzQ/exec',
+    {
+      method: 'POST',
+      body: formData,
+    },
+  )
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err))
+    .finally(() => {
+      window.alert('Kritik dan Saran sudah terkirim. Terima kasih')
+      loadingKritik.value = false
       formEle.reset()
     })
 }
@@ -37,7 +60,7 @@ const submitBrosur = () => {
         url('/img/backdrop.jpg');
       background-repeat: repeat;
     "
-    class="relative flex min-h-screen scroll-mt-20 flex-col items-center gap-6 px-4 pt-14 md:space-y-14 md:pt-24"
+    class="relative flex min-h-screen scroll-mt-20 flex-col items-center gap-6 px-4 pb-28 pt-14 md:space-y-14 md:pt-24"
   >
     <div
       class="flex flex-col gap-3"
@@ -71,7 +94,7 @@ const submitBrosur = () => {
           Silahkan Isi Formulir
         </span>
         <form
-          id="form"
+          id="guest"
           @submit.prevent="submitBrosur()"
           class="form flex flex-col gap-3"
         >
@@ -125,16 +148,80 @@ const submitBrosur = () => {
           <div class="flex w-full justify-end">
             <button
               type="submit"
-              class="fp mt-4 w-full transform-gpu rounded-2xl bg-gradient-to-b from-lightPrimary to-primary px-5 py-2 text-xs font-medium uppercase leading-none tracking-wide text-white active:scale-105 md:w-1/2"
+              class="fp mt-4 w-full transform-gpu rounded-2xl bg-gradient-to-b from-lightPrimary to-primary px-5 py-2 text-xs font-medium uppercase leading-none tracking-wide text-white duration-300 active:scale-105 md:w-1/2"
             >
-              <div :class="loading ? 'animate-pulse font-extrabold' : ''">
-                {{ loading ? 'o o o' : 'Lihat' }}
+              <div :class="loadingGuest ? 'animate-pulse font-extrabold' : ''">
+                {{ loadingGuest ? 'o o o' : 'Lihat' }}
               </div>
             </button>
           </div>
         </form>
       </div>
     </div>
+
+    <div
+      id="kritik"
+      class="mt-10 flex scroll-mt-20 flex-col gap-3"
+      data-aos="fade-up"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="1000"
+    >
+      <h3 class="fp text-2xl font-medium text-primary md:text-4xl">
+        Kritik dan Saran
+      </h3>
+      <div class="mx-auto h-2 w-5/6 bg-mdnLightGold"></div>
+    </div>
+
+    <div
+      class="flex w-full flex-col items-center justify-center bg-primary py-8"
+    >
+      <form
+        id="kritiksaran"
+        @submit.prevent="submitKritik()"
+        class="flex w-full flex-col items-center justify-center gap-8 px-4 md:flex-row md:gap-14"
+      >
+        <div class="flex flex-wrap items-center justify-center gap-6 md:gap-14">
+          <div class="flex items-center gap-4">
+            <label
+              for="Kritik"
+              class="leading-1 w-1/5 whitespace-nowrap text-sm text-white"
+            >
+              Kritik
+            </label>
+            <input
+              name="Kritik"
+              type="text"
+              class="appearance-none rounded-lg border bg-white px-3 py-1 focus-within:ring-1 focus-within:ring-primary focus-visible:outline-0 md:w-4/5"
+              required
+            />
+          </div>
+          <div class="flex items-center gap-4">
+            <label
+              for="Saran"
+              class="leading-1 w-1/5 whitespace-nowrap text-sm text-white"
+            >
+              Saran
+            </label>
+            <input
+              name="Saran"
+              type="text"
+              class="appearance-none rounded-lg border bg-white px-3 py-1 focus-within:ring-1 focus-within:ring-primary focus-visible:outline-0 md:w-4/5"
+              required
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="fp w-full max-w-xl transform-gpu rounded-2xl bg-white px-14 py-2 text-xs font-medium uppercase leading-none tracking-wide text-primary duration-300 active:scale-105 md:w-fit"
+        >
+          <div :class="loadingKritik ? 'animate-pulse font-extrabold' : ''">
+            {{ loadingKritik ? 'o o o' : 'Kirim' }}
+          </div>
+        </button>
+      </form>
+    </div>
+
     <div class="absolute -bottom-6 h-24 w-full bg-white blur-xl"></div>
   </section>
 </template>

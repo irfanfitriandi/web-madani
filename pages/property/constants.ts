@@ -75,7 +75,7 @@ export const DB = [
     img: {
       cover: ['/img/gr/cover_gr.jpg'],
       spek: ['/img/gr/spek_gr.jpg'],
-      site: ['/img/gr/siteplan_gr.jpg'],
+      site: ['/img/gr/siteplan_gr.png'],
       detail: [''],
       denah: ['/img/gr/denah_gr.jpg'],
     },
