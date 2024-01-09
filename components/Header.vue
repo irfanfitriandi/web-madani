@@ -20,12 +20,12 @@ const NAV_MENU = [
     to: '/#kritik',
   },
   {
-    name: 'Agen',
-    to: '/agen',
-  },
-  {
     name: 'Kontak',
     to: '/contact',
+  },
+  {
+    name: 'Jadi Agen',
+    to: 'https://api.whatsapp.com/send/?phone=628877092525&text=Assalamualaikum kak, saya mau jadi agen Madani Property',
   },
 ]
 
