@@ -28,7 +28,7 @@ const PROPERTY = [
   {
     name: 'property lainnya',
     path: 'https://docs.google.com/presentation/d/1JLibOlL9surbsXgdbZm12XkeahRlY7Mk/edit#slide=id.p1',
-    src: '/img/cover_more.jpg',
+    src: '/img/cover_more2.jpg',
   },
 ]
 
