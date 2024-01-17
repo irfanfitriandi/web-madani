@@ -64,9 +64,6 @@ const submitKritik = () => {
   >
     <div
       class="flex flex-col gap-3"
-      data-aos="fade-up"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="1000"
     >
       <h3 class="fp text-2xl font-medium text-primary md:text-4xl">
         Lihat Brosur
@@ -162,9 +159,6 @@ const submitKritik = () => {
     <div
       id="kritik"
       class="mt-10 flex scroll-mt-20 flex-col gap-3"
-      data-aos="fade-up"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="1000"
     >
       <h3 class="fp text-2xl font-medium text-primary md:text-4xl">
         Kritik dan Saran
