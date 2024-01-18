@@ -37,7 +37,7 @@ export const DB = [
         '/img/vp/denah_vp22.jpg',
       ],
     },
-    maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.1462136813852!2d105.3037129!3d-5.394679700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db59e3515d3b%3A0xff85e940426f5b6!2sVILLA%20MADANI!5e0!3m2!1sen!2sid!4v1703754264608!5m2!1sen!2sid',
+    maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.1476349715786!2d105.3116134!3d-5.3944626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db000aebdf8b%3A0x62e755f8df5e6d56!2sVilla%20Permata!5e0!3m2!1sid!2sid!4v1705547348613!5m2!1sid!2sid',
   },
   {
     name: 'new-zhafira',
@@ -65,7 +65,7 @@ export const DB = [
       detail: [''],
       denah: ['/img/d/denah_d.jpg'],
     },
-    maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.1462136813852!2d105.3037129!3d-5.394679700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db59e3515d3b%3A0xff85e940426f5b6!2sVILLA%20MADANI!5e0!3m2!1sen!2sid!4v1703754264608!5m2!1sen!2sid',
+    maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.124443994437!2d105.31100579999999!3d-5.3980039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dbd3b30ca2f7%3A0xa86a30d9871a7c81!2sPerumahan%20Damaido!5e0!3m2!1sid!2sid!4v1705547272531!5m2!1sid!2sid',
   },
   {
     name: 'green-residence',
