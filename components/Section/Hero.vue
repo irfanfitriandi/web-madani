@@ -19,7 +19,7 @@ defineProps<{
       "
       class="absolute h-[80vh] w-full bg-[length:200%] bg-center md:h-[90vh] md:bg-[length:90%]"
     ></div>
-    <div
+    <h1
       class="w-fit pr-4 pt-10 text-end text-2xl font-light text-darkPrimary md:pr-14 md:pt-24 md:text-5xl"
       data-aos="fade-left"
       data-aos-easing="ease-in-sine"
@@ -30,7 +30,7 @@ defineProps<{
       <div class="w-fit font-normal backdrop-blur-3xl md:bg-white/30">
         Madani Property Lampung
       </div>
-    </div>
+    </h1>
     <div
       v-if="!loading"
       class="absolute flex h-full w-full items-center justify-center"

@@ -26,6 +26,21 @@ const PROPERTY = [
     src: '/img/cover_greenres.jpg',
   },
   {
+    name: 'ruko villa permata',
+    path: '/property/ruko-villa-permata',
+    src: '/img/new/ruko-villa-permata/1.jpeg',
+  },
+  {
+    name: 'dokter harun',
+    path: '/property/dokter-harun',
+    src: '/img/new/dokter-harun/1.jpeg',
+  },
+  {
+    name: 'enggal',
+    path: '/property/enggal',
+    src: '/img/new/enggal/1.jpeg',
+  },
+  {
     name: 'property lainnya',
     path: 'https://docs.google.com/presentation/d/1JLibOlL9surbsXgdbZm12XkeahRlY7Mk/edit#slide=id.p1',
     src: '/img/cover_more2.jpg',
@@ -43,10 +58,8 @@ onMounted(() => {
   <section
     id="property"
     style="
-      background-image: linear-gradient(
-          rgb(255, 255, 255),
-          rgba(255, 255, 255, 0.75)
-        ),
+      background-image:
+        linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.75)),
         url('/img/backdrop.jpg');
       background-repeat: repeat;
     "
@@ -58,9 +71,9 @@ onMounted(() => {
       data-aos-easing="ease-in-sine"
       data-aos-duration="1000"
     >
-      <h3 class="fp text-2xl font-medium text-primary md:text-4xl">
+      <h2 class="fp text-2xl font-medium text-primary md:text-4xl">
         Property Kami
-      </h3>
+      </h2>
       <div class="mx-auto h-2 w-5/6 bg-mdnLightGold"></div>
     </div>
 

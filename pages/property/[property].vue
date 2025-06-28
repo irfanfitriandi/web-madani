@@ -25,10 +25,8 @@ onMounted(() => {
 <template>
   <section
     style="
-      background-image: linear-gradient(
-          rgba(255, 255, 255, 0.8),
-          rgba(255, 255, 255, 0.8)
-        ),
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
         url('/img/backdrop.jpg');
       background-repeat: repeat;
     "
@@ -37,10 +35,8 @@ onMounted(() => {
     <div class="h-42 relative w-full overflow-clip md:h-52">
       <div
         style="
-          background-image: linear-gradient(
-              rgba(95, 151, 86, 0.2),
-              rgba(0, 0, 0, 0.3)
-            ),
+          background-image:
+            linear-gradient(rgba(95, 151, 86, 0.2), rgba(0, 0, 0, 0.3)),
             url('/img/drone.jpg');
           background-repeat: repeat;
         "
@@ -54,11 +50,11 @@ onMounted(() => {
         data-aos-duration="1000"
       >
         <div class="relative">
-          <div
+          <h1
             class="bg-primary px-2 py-1 text-2xl font-bold tracking-widest text-white md:text-3xl"
           >
             {{ data.display }}
-          </div>
+          </h1>
           <div
             class="absolute -right-1 top-1 -z-10 h-full w-full bg-mdnGold opacity-80"
           ></div>
@@ -95,13 +91,13 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="mt-4 px-1">
+    <div class="mt-4 px-1 py-4">
       <div class="mb-5">
-        <h3
+        <h2
           class="fp text-center text-lg font-semibold text-primary md:text-xl"
         >
           Waktunya miliki rumah impian anda!
-        </h3>
+        </h2>
         <p class="text-center text-xs md:text-sm">
           Segera hubungi kami untuk rincian lebih lanjut dan jadwalkan kunjungan
           langsung tipe rumah ini.
@@ -121,7 +117,7 @@ onMounted(() => {
       </a>
     </div>
 
-    <div class="mt-10 w-full">
+    <div v-if="data.maps" class="mt-10 w-full">
       <iframe
         title="map villa madani"
         :src="data.maps"

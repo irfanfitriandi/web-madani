@@ -11,10 +11,10 @@ defineProps<{
     data-aos-easing="ease-in-sine"
     data-aos-duration="1000"
   >
-    <h3
+    <h2
       class="fp bg-white px-4 py-[2px] text-xl font-medium text-primary/80 md:text-2xl"
     >
       {{ title }}
-    </h3>
+    </h2>
   </div>
 </template>

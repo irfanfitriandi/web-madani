@@ -14,7 +14,7 @@ export default defineNuxtConfig({
           hid: 'description',
           name: 'description',
           content:
-            'Madani Property Lampung menyajikan hunian aman, nyaman, dan asri di Lampung. Kami hadir dengan inovasi konsep perumahan berkualitas, lokasi strategis, desain kreatif, dan kemudahan pembayaran.',
+            'Madani Property Lampung menyajikan hunian aman, nyaman, dan asri di Lampung. Kami hadir dengan inovasi konsep perumahan berkualitas dan lokasi strategis.',
         },
         { name: 'format-detection', content: 'telephone=no' },
         { 'http-equiv': 'cache-control', content: 'no-cache' },
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
           name: 'og:description',
           property: 'og:description',
           content:
-            'Madani Property Lampung menyajikan hunian aman, nyaman, dan asri di Lampung. Kami hadir dengan inovasi konsep perumahan berkualitas, lokasi strategis, desain kreatif, dan kemudahan pembayaran.',
+            'Madani Property Lampung menyajikan hunian aman, nyaman, dan asri di Lampung. Kami hadir dengan inovasi konsep perumahan berkualitas dan lokasi strategis.',
         },
         {
           hid: 'og:image',

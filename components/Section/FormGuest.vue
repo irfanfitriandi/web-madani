@@ -65,9 +65,9 @@ const submitKritik = () => {
     <div
       class="flex flex-col gap-3"
     >
-      <h3 class="fp text-2xl font-medium text-primary md:text-4xl">
+      <h2 class="fp text-2xl font-medium text-primary md:text-4xl">
         Lihat Brosur
-      </h3>
+      </h2>
       <div class="mx-auto h-2 w-5/6 bg-mdnLightGold"></div>
     </div>
 
@@ -160,9 +160,9 @@ const submitKritik = () => {
       id="kritik"
       class="mt-10 flex scroll-mt-20 flex-col gap-3"
     >
-      <h3 class="fp text-2xl font-medium text-primary md:text-4xl">
+      <h2 class="fp text-2xl font-medium text-primary md:text-4xl">
         Kritik dan Saran
-      </h3>
+      </h2>
       <div class="mx-auto h-2 w-5/6 bg-mdnLightGold"></div>
     </div>
 
