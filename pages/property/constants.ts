@@ -96,6 +96,7 @@ export const DB = [
         '/img/new/ruko-villa-permata/6.jpeg',
         '/img/new/ruko-villa-permata/7.jpeg',
         '/img/new/ruko-villa-permata/8.jpeg',
+        '/img/new/ruko-villa-permata/9.jpeg',
       ],
       spek: [''],
       site: [''],
